@@ -1,0 +1,31 @@
+{
+  "name": "forth",
+  "version": "0.0.2",
+  "description": "Forth programming environment",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint lib/*.js ; mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drom/forth.git"
+  },
+  "keywords": [
+    "forth"
+  ],
+  "author": "drom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/forth/issues"
+  },
+  "homepage": "https://github.com/drom/forth",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.5.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^1.2.1",
+    "mocha": "^2.2.5"
+  }
+}
