@@ -1,6 +1,6 @@
 {
   "name": "forth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Forth programming environment",
   "main": "lib/index.js",
   "scripts": {
