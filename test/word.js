@@ -23,7 +23,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 3,
             last: 15,
-            word: word
+            word: word.str
         };
         expect(test.word(delimeter)).to.be.equal('abc');
         expect(test.word(delimeter)).to.be.equal('de');
@@ -41,7 +41,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 0,
             last: 7,
-            word: word
+            word: word.str
         };
         expect(test.word(delimeter)).to.be.equal('xy');
         expect(test.word(delimeter)).to.be.equal('z');
@@ -58,7 +58,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 3,
             last: 15,
-            word: word
+            word: word.buf
         };
         expect(test.word(delimeter)).to.be.equal('abc');
         expect(test.word(delimeter)).to.be.equal('de');
@@ -76,7 +76,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 0,
             last: 7,
-            word: word
+            word: word.buf
         };
         expect(test.word(delimeter)).to.be.equal('xy');
         expect(test.word(delimeter)).to.be.equal('z');
@@ -93,7 +93,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 3,
             last: 15,
-            word: word
+            word: word.arr
         };
         expect(test.word(delimeter)).to.be.equal('abc');
         expect(test.word(delimeter)).to.be.equal('de');
@@ -111,7 +111,7 @@ describe('#word', function () {
             buf: buf,
             ptr: 0,
             last: 7,
-            word: word
+            word: word.arr
         };
         expect(test.word(delimeter)).to.be.equal('xy');
         expect(test.word(delimeter)).to.be.equal('z');
