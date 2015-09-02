@@ -1,10 +1,10 @@
 {
   "name": "forth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Forth programming environment",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint lib/*.js ; mocha test"
+    "test": "eslint lib/*.js ; istanbul cover _mocha -- test/word.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,13 @@
   "homepage": "https://github.com/drom/forth",
   "dependencies": {
     "colors": "^1.1.2",
-    "commander": "^2.5.0"
+    "commander": "^2.5.0",
+    "jsof": "0.0.6"
   },
   "devDependencies": {
     "chai": "^3.2.0",
     "eslint": "^1.2.1",
+    "istanbul": "^0.3.19",
     "mocha": "^2.2.5"
   }
 }
