@@ -4,7 +4,7 @@
   "description": "Forth programming environment",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint lib/*.js ; istanbul cover _mocha -- test/word.js test/interpret.js"
+    "test": "eslint lib/*.js ; mocha test/word.js test/interpret.js"
   },
   "repository": {
     "type": "git",
