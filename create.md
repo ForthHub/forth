@@ -20,7 +20,7 @@ One thing that definitely cannot be done with an execution token is use `!` or `
 Forth has words to create other words.
 
 word        | _name | Iterpretation | Compilation   | RunTime     | def | spec
------------ | ----- | ------------- | ------------- | ----------- | --- |
+----------- | ----- | ------------- | ------------- | ----------- | --- | --------
 `'`         |       |               |               | _name -- xt |     | core
 `:`         |       | _name =>      |               |             | new | core
 `;`         |       |               | <=            |             | add | core
