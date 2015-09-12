@@ -19,30 +19,30 @@ One thing that definitely cannot be done with an execution token is use `!` or `
 
 Forth has words to create other words.
 
-word        | _name       | Iterpretation | Compilation   | RunTime    | def | spec
------------ | ----------- | ------------- | ------------- | ---------- | --- |
-`'`         | _name -- xt |               |               |            |     | core
-`:`         |             | _name =>      |               |            | new | core
-`;`         |             |               | <=            |            | add | core
-`>body`     |             |               |               | xt -- addr | add | core
-`abort`     |             |               | <=            |            |     | core
-`abort"`    |             |               | <=            |            |     | core
-`constant`  | yes         | yes           |               |            | new | core
-`create`    | yes         | yes           | yes           |            | new | core
-`does>`     |             |               |               |            |     | core
-`evaluate`  |             | str --        | str --        |            |     | core
-`execute`   |             |               |               |            |     | core
-`find`      |             | str -- -1,0,1 | str -- -1,0,1 |            |     | core
-`immediate` |             |               |               |            |     | core
-`literal`   |             |               | n --          | -- n       | add | core
-`postpone`  |             |               | _name         |            | add | core
-`quit`      |             |               | <=            |            |     | core
-`recurse`   |             |               | yes           |            | add | core
-`variable`  | yes         | yes           |               |            | new | core
-`[`         |             |               | <=            |            |     | core
-`[']`       |             |               | _name         | -- xt      |     | core
-`[char]`    |             |               | _name         | -- char    |     | core
-`]`         |             | =>            |               |            |     | core
-`:noname`   |             | =>            |               |            | new | core `ext`
-`compile,`  |             |               | xt --         |            |     | core ext
-`[compile]` |             |               | _name --      |            |     | core ext
+word        | _name | Iterpretation | Compilation   | RunTime     | def | spec
+----------- | ----- | ------------- | ------------- | ----------- | --- |
+`'`         |       |               |               | _name -- xt |     | core
+`:`         |       | _name =>      |               |             | new | core
+`;`         |       |               | <=            |             | add | core
+`>body`     |       |               |               | xt -- addr  | add | core
+`abort`     |       |               | <=            |             |     | core
+`abort"`    |       |               | <=            |             |     | core
+`constant`  | yes   | yes           |               |             | new | core
+`create`    | yes   | yes           | yes           |             | new | core
+`does>`     |       |               |               |             | add | core
+`evaluate`  |       | str --        | str --        |             |     | core
+`execute`   |       |               |               |             |     | core
+`find`      |       | str -- -1,0,1 | str -- -1,0,1 |             |     | core
+`immediate` |       |               |               |             |     | core
+`literal`   |       |               | n --          | -- n        | add | core
+`postpone`  |       |               | _name         |             | add | core
+`quit`      |       |               | <=            |             |     | core
+`recurse`   |       |               | yes           |             | add | core
+`variable`  | yes   | yes           |               |             | new | core
+`[`         |       |               | <=            |             |     | core
+`[']`       |       |               | _name         | -- xt       |     | core
+`[char]`    |       |               | _name         | -- char     |     | core
+`]`         |       | =>            |               |             |     | core
+`:noname`   |       | =>            |               |             | new | core ext
+`compile,`  |       |               | xt --         |             |     | core ext
+`[compile]` |       |               | _name --      |             |     | core ext
