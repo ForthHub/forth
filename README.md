@@ -3,6 +3,17 @@
 
 Forth programming environment implemented in JavaScript.
 
+## Use
+### Node.js
+
+```
+npm i forth --save
+```
+
+```js
+var forth = require('forth');
+```
+
 ## Testing
 `npm test`
 
