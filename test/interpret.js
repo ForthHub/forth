@@ -29,7 +29,7 @@ describe('#interpret', function () {
         test.interpret(' dup 5 nip ');
         expect(test.DS).to.deep.equal([7, 6, 5]);
 
-        test.interpret(' drop over * nip');
+        test.interpret(' drop OVER * nip');
         expect(test.DS).to.deep.equal([42]);
 
         done();
