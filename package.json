@@ -1,10 +1,10 @@
 {
   "name": "forth",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Forth programming environment",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint lib/*.js ; istanbul cover _mocha -- test/word.js test/interpret.js"
+    "test": "eslint lib/*.js && mocha test/word.js test/interpret.js test/create.js"
   },
   "repository": {
     "type": "git",
@@ -25,12 +25,12 @@
     "escodegen": "^1.7.0",
     "esprima": "^2.6.0",
     "estraverse": "^4.1.0",
-    "jsof": "0.0.6"
+    "jsof": "^0.0.7"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
-    "eslint": "^1.4.1",
-    "istanbul": "^0.3.19",
-    "mocha": "^2.3.2"
+    "chai": "^3.3.0",
+    "eslint": "^1.5.1",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3"
   }
 }
