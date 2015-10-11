@@ -25,12 +25,12 @@
     "escodegen": "^1.7.0",
     "esprima": "^2.6.0",
     "estraverse": "^4.1.0",
-    "jsof": "^0.0.7"
+    "jsof": "^0.1.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
-    "eslint": "^1.5.1",
-    "istanbul": "^0.3.21",
+    "eslint": "^1.6.0",
+    "istanbul": "^0.3.22",
     "mocha": "^2.3.3"
   }
 }
