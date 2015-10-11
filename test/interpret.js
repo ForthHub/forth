@@ -1,18 +1,12 @@
 'use strict';
 
-var stack = require('../lib/stack'),
-    memory = require('../lib/memory'),
-    // word = require('../lib/word'),
-    // create = require('../lib/create'),
-    interpret = require('../lib/interpret'),
+var forth = require('../lib'),
     expect = require('chai').expect;
 
 describe('#interpret', function () {
 
     it('#stack', function (done) {
-        var test = { L: [], O: {} };
-        stack(test);
-        interpret(test);
+        var test = forth();
 
         expect(test.DS).to.deep.equal([]);
         test.interpret(' 6    7     ', function () {
@@ -31,10 +25,7 @@ describe('#interpret', function () {
     });
 
     it('#memory', function (done) {
-        var test = { L: [], O: {} };
-        stack(test);
-        memory(test);
-        interpret(test);
+        var test = forth();
 
         expect(test.DS).to.deep.equal([]);
         test.interpret(' 6 0 !   7 4 !  0 @ 4 @ *  ', function () {

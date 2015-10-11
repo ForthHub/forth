@@ -9,7 +9,6 @@ describe('#vocabulary',function () {
         // f.def('test', '1 6 7 + 3 nip words .s if');
         // f.fn('test')();
         // console.log(jsof.stringify(f));
-        f.interpret(' :  nip  swap drop ;  nip   ');
-        done();
+        f.interpret(' :  nip  swap drop ;  nip   ', done);
     });
 });

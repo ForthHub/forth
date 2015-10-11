@@ -12,7 +12,23 @@ npm i forth --save
 
 ```js
 var forth = require('forth');
+var f = forth(); // new instance of Forth machine
 ```
+
+### Browser
+use Browserify!
+
+### APIs
+#### f.interpret(input, cb)
+Run Forth interpreter.
+
+`input` can be String or Stream
+
+#### f.DS()
+Data stack Array
+
+#### f.RS()
+Return stack Array
 
 ## Testing
 `npm test`
