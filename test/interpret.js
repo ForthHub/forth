@@ -5,7 +5,7 @@ var forth = require('../lib'),
 
 describe('#interpret', function () {
 
-    it('#stack', function (done) {
+    it('#literal swap dup nip drop over +', function (done) {
         var test = forth();
 
         expect(test.DS).to.deep.equal([]);
@@ -15,8 +15,8 @@ describe('#interpret', function () {
                 expect(test.DS).to.deep.equal([7, 6]);
                 test.interpret(' dup 5 nip ', function () {
                     expect(test.DS).to.deep.equal([7, 6, 5]);
-                    test.interpret(' drop OVER * nip', function () {
-                        expect(test.DS).to.deep.equal([42]);
+                    test.interpret(' drop OVER + nip', function () {
+                        expect(test.DS).to.deep.equal([13]);
                         done();
                     });
                 });
@@ -24,7 +24,7 @@ describe('#interpret', function () {
         });
     });
 
-    it('#memory', function (done) {
+    it('#literal ! @ *', function (done) {
         var test = forth();
 
         expect(test.DS).to.deep.equal([]);

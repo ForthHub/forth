@@ -45,7 +45,8 @@ describe('#basic', function () {
 
         run('-5 9 +', [4], []);
         run('7 3 -', [4], []);
-        run('drop', [], []);
+        run('dup', [4, 4], []);
+        run('drop drop', [], []);
     });
     it('#stream', function () {
         forth.quit();
