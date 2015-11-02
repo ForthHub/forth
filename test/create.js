@@ -35,7 +35,7 @@ describe('#create', function () {
     });
     it('#: literal if else then diz', function (done) {
         var test = forth();
-        test.interpret(': foo if 5 else 7 then ; 0 foo diz foo', function () {
+        test.interpret(': foo if 5 else 7 then ; 0 foo see foo', function () {
             expect(test.DS).to.deep.equal([7]);
             done();
         });
