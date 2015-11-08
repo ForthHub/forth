@@ -7,7 +7,7 @@ describe('#create', function () {
     it('#create here literal , dup @', function (done) {
         var test = forth();
         expect(test.DS).to.deep.equal([]);
-        test.interpret(' create foo here 0xffffffff , here foo dup @ 0 @ 1 @ 2 @ 3 @ 4 @', function () {
+        test.interpret(' create foo here -1 , here foo dup @ 0 @ 1 @ 2 @ 3 @ 4 @', function () {
             expect(test.DS).to.deep.equal([0, 4, 0, -1, -1, -1, -1, -1, 0]);
             done();
         });
