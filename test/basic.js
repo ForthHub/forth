@@ -3,21 +3,12 @@
 var forth = require('../lib'),
     expect = require('chai').expect;
 
-function run (str, ds, rs) {
-    forth.RS = [];
-    forth.DS = [];
-    str
-    .split(' ')
-    .forEach(function (name) {
-        var op;
-        op = forth[name];
-        if (op) {
-            op.call(forth);
-        } else {
-            forth.DS.push(Number(name));
-        }
-    });
-    expect([forth.DS, forth.RS]).to.deep.equal([ds, rs]);
+function run (str, ds, rs, done) {
+    var f = forth();
+    f.interpret(str, function () {
+        expect([f.DS, f.RS]).to.deep.equal([ds, rs]);
+        done();
+    })
 }
 
 describe('#basic', function () {
