@@ -39,9 +39,9 @@
 }
 
 {
+  ; // 1
   L2: {
     L1: {
-      ; // 1
       if (!dpop()) break L1; // IF
       ; // 2
       break L2; // ELSE
@@ -52,9 +52,9 @@
 }
 
 {
+  ; // 1
   L2: {
     L1: {
-      ; // 1
       if (!dpop()) break L1; // IF
       ; // 2
       break L2; // ELSE
@@ -65,9 +65,9 @@
 }
 
 {
+  ; // 1
   L2: {
     L1: {
-      ; // 1
       if (!dpop()) break L1; // IF
       ; // 2
       break L2; // ELSE
