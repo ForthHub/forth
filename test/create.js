@@ -61,5 +61,12 @@ describe('#create', function () {
             done();
         });
     });
+    it('#: code see', function (done) {
+        var test = forth();
+        test.interpret(' code x6 function () { this.dpush(this.dpop() * 6); } # end-code 7 x6 see x6', function () {
+            expect(test.DS).to.deep.equal([42]);
+            done();
+        });
+    });
 
 });
