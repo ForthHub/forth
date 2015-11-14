@@ -33,10 +33,31 @@ describe('#create', function () {
             done();
         });
     });
-    it('#: literal if else then diz', function (done) {
+    it('#: literal if else then see', function (done) {
         var test = forth();
         test.interpret(': foo if 5 else 7 then ; 0 foo see foo', function () {
             expect(test.DS).to.deep.equal([7]);
+            done();
+        });
+    });
+    it('#: literal begin until see', function (done) {
+        var test = forth();
+        test.interpret(': foo 1 begin 2 until 3 ; foo see foo', function () {
+            expect(test.DS).to.deep.equal([1, 3]);
+            done();
+        });
+    });
+    it('#: literal begin while repeat see', function (done) {
+        var test = forth();
+        test.interpret(': foo 1 begin 0 while 3 repeat 4 ; foo see foo', function () {
+            expect(test.DS).to.deep.equal([1, 4]);
+            done();
+        });
+    });
+    it('#: literal begin while while repeat else then see', function (done) {
+        var test = forth();
+        test.interpret(': foo 1 begin 2 while 3 while 4 repeat 5 else 6 then 7 ; foo see foo', function () {
+            expect(test.DS).to.deep.equal([1, 4, 5, 7]);
             done();
         });
     });
