@@ -68,5 +68,19 @@ describe('#create', function () {
             done();
         });
     });
+    it('#: literal do i . loop see', function (done) {
+        var test = forth();
+        test.interpret(': foo 10 0 do i . loop ; see foo foo ', function () {
+            expect(test.DS).to.deep.equal([]);
+            done();
+        });
+    });
+    it('#: literal do i . +loop see', function (done) {
+        var test = forth();
+        test.interpret(': foo 10 0 do i . 2 +loop ; see foo foo ', function () {
+            expect(test.DS).to.deep.equal([]);
+            done();
+        });
+    });
 
 });
