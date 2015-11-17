@@ -3,6 +3,9 @@
   "version": "0.6.0",
   "description": "Forth programming environment",
   "main": "lib/index.js",
+  "bin": {
+    "forth": "./bin/forth.js"
+  },
   "scripts": {
     "test": "eslint lib/*.js test/*.js && mocha test/word.js test/interpret.js test/create.js test/vocabulary.js",
     "cover": "istanbul cover _mocha -- test/word.js test/interpret.js test/create.js test/vocabulary.js"
