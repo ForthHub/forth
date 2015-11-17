@@ -10,9 +10,23 @@ Forth programming environment implemented in JavaScript.
 npm i forth --save
 ```
 
+### REPL
+```
+./node_modules/.bin/forth
+```
+
+### Streaming CLI
+```
+./node_modules/.bin/forth < core.frt
+```
+
+### Library
+
 ```js
 var forth = require('forth');
 var f = forth(); // new instance of Forth machine
+// f.s -- is the duplex stream
+process.stdin.pipe(f.s).pipe(process.stdout);
 ```
 
 ### Browser
