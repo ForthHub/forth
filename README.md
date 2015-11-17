@@ -7,17 +7,17 @@ Forth programming environment implemented in JavaScript.
 ### Node.js
 
 ```
-npm i forth --save
+npm i forth -g
 ```
 
 ### REPL
 ```
-./node_modules/.bin/forth
+forth
 ```
 
 ### Streaming CLI
 ```
-./node_modules/.bin/forth < core.frt
+forth < core.frt
 ```
 
 ### Library
