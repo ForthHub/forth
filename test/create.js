@@ -8,7 +8,7 @@ describe('#create', function () {
         var test = forth();
         expect(test.DS).to.deep.equal([]);
         test.interpret(' create foo here -1 , here foo dup @ 0 @ 1 @ 2 @ 3 @ 4 @', function () {
-            expect(test.DS).to.deep.equal([32, 36, 36, 0, 0, 0, 0, 0, 10]);
+            expect(test.DS).to.deep.equal([32, 36, 32, -1, 0, 0, 0, 0, 10]);
             done();
         });
     });

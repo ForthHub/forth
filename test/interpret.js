@@ -29,7 +29,7 @@ describe('#interpret', function () {
 
         expect(test.DS).to.deep.equal([]);
         test.interpret(' create foo 333 , 555 , foo ', function () {
-            expect(test.DS).to.deep.equal([40]);
+            expect(test.DS).to.deep.equal([32]);
             done();
         });
     });
