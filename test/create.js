@@ -8,7 +8,7 @@ describe('#create', function () {
         var test = forth();
         expect(test.DS).to.deep.equal([]);
         test.interpret(' create foo here -1 , here foo dup @ 0 @ 1 @ 2 @ 3 @ 4 @', function () {
-            expect(test.DS).to.deep.equal([0, 4, 4, 0, -1, -1, -1, -1, 0]);
+            expect(test.DS).to.deep.equal([32, 36, 36, 0, 0, 0, 0, 0, 10]);
             done();
         });
     });
@@ -22,7 +22,7 @@ describe('#create', function () {
     it('#variable literal ! ', function (done) {
         var test = forth();
         test.interpret(' variable v0 55555 ! variable  v1   v0 v1 ', function () {
-            expect(test.DS).to.deep.equal([0, 4]);
+            expect(test.DS).to.deep.equal([32, 36]);
             done();
         });
     });

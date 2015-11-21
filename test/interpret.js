@@ -28,8 +28,8 @@ describe('#interpret', function () {
         var test = forth();
 
         expect(test.DS).to.deep.equal([]);
-        test.interpret(' 6 0 !   7 4 !  0 @ 4 @ *  ', function () {
-            expect(test.DS).to.deep.equal([42]);
+        test.interpret(' create foo 333 , 555 , foo ', function () {
+            expect(test.DS).to.deep.equal([40]);
             done();
         });
     });
