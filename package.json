@@ -28,16 +28,16 @@
     "chai": "^3.5.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "concat-stream": "^1.5.1",
-    "escodegen": "^1.8.0",
-    "esprima": "^2.7.2",
+    "concat-stream": "^1.6.0",
+    "escodegen": "^1.8.1",
+    "esprima": "^3.1.3",
     "estraverse": "^4.2.0",
     "jsof": "^0.2.1",
-    "long": "^3.1.0"
+    "long": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3"
+    "mocha": "^3.2.0"
   }
 }
